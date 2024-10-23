@@ -3,6 +3,7 @@
   --SoftRed: hsl(0, 94%, 66%);
   --GrayishBlue: hsl(229, 8%, 60%);
   --VeryDarkBlue: hsl(229, 31%, 21%);
+  --White: hsl(0, 0%, 100%);
 }
 
 /* Box sizing rules */
@@ -96,8 +97,7 @@ a:not([class]) {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
   display: block;
   max-width: 100%;
 }

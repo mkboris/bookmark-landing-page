@@ -1,0 +1,70 @@
+.header {
+  max-width: 69rem;
+  margin: 2.5rem auto 5rem;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: none;
+}
+
+.hamBtn {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.hamBtn:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  outline-offset: 0.125rem;
+}
+
+@media screen and (min-width: 45.625rem) {
+  .header {
+    padding-inline: 2.5rem;
+    margin-block-end: 6.75rem;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .nav ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .nav ul a:link,
+  .nav ul a:visited {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 131%;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: var(--VeryDarkBlue);
+    text-decoration: none;
+    transition: color ease 0.3s;
+  }
+
+  .nav ul a:is(:hover, :focus) {
+    color: var(--SoftRed);
+  }
+
+  .nav ul a:focus-visible {
+    outline: 0.125rem solid var(--SoftBlue);
+    outline-offset: 0.25rem;
+  }
+
+  .hamBtn {
+    display: none;
+  }
+}

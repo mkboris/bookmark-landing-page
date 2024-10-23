@@ -1,0 +1,51 @@
+.btn {
+  color: var(--White);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 131%;
+  letter-spacing: 0.0625rem;
+  font-family: inherit;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+  transition: all ease 0.3s;
+}
+
+.login {
+  font-size: 0.8125rem;
+  border: 0.125rem solid transparent;
+  text-transform: uppercase;
+  padding: 0.625rem 2rem;
+  background: var(--SoftRed);
+  box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(73, 93, 207, 0.20012);
+}
+
+.login:hover {
+  background-color: var(--White);
+  color: var(--SoftRed);
+  border: 0.125rem solid var(--SoftRed);
+}
+
+.login:focus-visible,
+.loginMobile:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  outline-offset: 0.125rem;
+}
+
+.loginMobile {
+  font-size: 1.25rem;
+  line-height: 85%;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  color: var(--White);
+  background: transparent;
+  border: 0.125rem solid var(--White);
+  border-radius: 0.3125rem;
+  padding: 1em;
+  width: 100%;
+}
+
+.loginMobile:hover {
+  color: var(--SoftRed);
+  border: 0.125rem solid var(--SoftRed);
+}

@@ -1,0 +1,86 @@
+.menuContainer {
+  position: absolute;
+  width: 100%;
+  height: 41.6875rem;
+  left: 0;
+  top: 0;
+  background: #242a45;
+  mix-blend-mode: normal;
+  opacity: 0.95;
+  backdrop-filter: blur(16.3097px);
+  padding-block-start: 2.5rem;
+  padding-inline: 2rem;
+}
+
+.logoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.closeBtn:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  outline-offset: 0.125rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-block-start: 2.5rem;
+  margin-block-end: 13.6875rem;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.menu ul a:link,
+.menu ul a:visited {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--White);
+  line-height: 85%;
+  text-align: center;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color ease 0.3s;
+  padding: 1.5rem;
+  border: 1px solid #545454;
+  border-left: none;
+  border-right: none;
+}
+
+.menu ul a.menuPrice:link,
+.menu ul a.menuPrice:visited {
+  border: none;
+}
+
+.menu ul a:is(:hover, :focus) {
+  color: var(--SoftRed);
+}
+
+.menu ul a:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  border: 1px solid transparent;
+}
+
+@media screen and (min-width: 45.625rem) {
+  .menuContainer {
+    display: none;
+  }
+}

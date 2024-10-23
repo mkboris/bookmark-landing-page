@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import MainEl from "./components/MainEl";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import MainEl from "./components/MainEl/MainEl";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
 
 export default App;
 
-// Features Pricing Contact Login A Simple Bookmark Manager A clean and simple
+//     A Simple Bookmark Manager A clean and simple
 // interface to organize your favourite websites. Open a new browser tab and
 // see your sites load instantly. Try it for free. Get it on Chrome Get it on
 // Firefox Features Our aim is to make it quick and easy for you to access your

@@ -1,4 +1,4 @@
-import styles from './MainEl.module.css'
+import styles from "./MainEl.module.css";
 
 function MainEl() {
   return <main></main>;
