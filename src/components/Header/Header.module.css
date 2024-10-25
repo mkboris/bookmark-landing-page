@@ -1,5 +1,5 @@
 .header {
-  max-width: 69rem;
+  max-width: 1184px;
   margin: 2.5rem auto 5rem;
   padding-inline: 2rem;
   display: flex;
@@ -24,10 +24,10 @@
   outline-offset: 0.125rem;
 }
 
-@media screen and (min-width: 45.625rem) {
+@media screen and (min-width: 770px) {
   .header {
-    padding-inline: 2.5rem;
     margin-block-end: 6.75rem;
+    padding-inline: 2.5rem;
   }
 
   .nav {

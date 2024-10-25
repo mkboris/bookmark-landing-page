@@ -10,6 +10,7 @@
   backdrop-filter: blur(16.3097px);
   padding-block-start: 2.5rem;
   padding-inline: 2rem;
+  z-index: 9999;
 }
 
 .logoBtn {
@@ -79,7 +80,7 @@
   border: 1px solid transparent;
 }
 
-@media screen and (min-width: 45.625rem) {
+@media screen and (min-width: 770px) {
   .menuContainer {
     display: none;
   }

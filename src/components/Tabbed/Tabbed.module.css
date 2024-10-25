@@ -1,0 +1,139 @@
+.tabbedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  margin-bottom: 77px;
+  padding-inline: 2rem;
+}
+
+:global(.secHeading) {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+  line-height: 217%;
+  letter-spacing: -0.075px;
+  color: var(--VeryDarkBlue);
+}
+
+.tabsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabContentWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 69px;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.tabBtn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 106%;
+  letter-spacing: 0.533333px;
+  color: var(--VeryDarkBlue);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+  border-bottom: 4px solid transparent;
+  padding-block: 20px;
+  width: fit-content;
+  align-self: center;
+}
+
+.tabBtn:hover {
+  color: var(--SoftRed);
+  opacity: 1;
+  mix-blend-mode: unset;
+}
+
+.tabBtn.active {
+  color: var(--VeryDarkBlue);
+  opacity: 1;
+  mix-blend-mode: unset;
+  border-bottom: 4px solid var(--SoftRed);
+}
+
+.tabBtn:focus-visible {
+  outline: none;
+  /* outline: 2px solid var(--SoftBlue); */
+  border-bottom: 4px solid var(--SoftBlue);
+}
+
+.lineMobile {
+  height: 1px;
+  border: none;
+  background: rgba(73, 93, 207, 0.20012);
+}
+
+@media screen and (min-width: 968px) {
+  .tabbedContainer {
+    margin-bottom: 238px;
+    gap: 72px;
+  }
+
+  :global(.secHeading) {
+    line-height: 162%;
+    letter-spacing: -0.1px;
+    margin-bottom: 1rem;
+  }
+
+  .tabsWrap {
+    align-items: center;
+  }
+
+  .tabs {
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    max-width: 730px;
+  }
+
+  .tabBtn {
+    padding-block-start: 0;
+    padding-block-end: 28px;
+    padding-inline: 53px;
+  }
+
+  .tabs::after {
+    content: "";
+    position: absolute;
+    width: 724px;
+    height: 1px;
+    background: rgba(73, 93, 207, 0.20012);
+    bottom: 0;
+  }
+
+  .tabContentWrap {
+    flex-direction: row;
+    gap: 125px;
+  }
+
+  .tabContent {
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .lineMobile {
+    display: none;
+  }
+}

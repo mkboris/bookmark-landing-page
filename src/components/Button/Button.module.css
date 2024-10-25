@@ -8,7 +8,13 @@
   border: transparent;
   cursor: pointer;
   border-radius: 0.3125rem;
+  box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(73, 93, 207, 0.20012);
   transition: all ease 0.3s;
+}
+
+.btn:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  outline-offset: 0.125rem;
 }
 
 .login {
@@ -17,19 +23,12 @@
   text-transform: uppercase;
   padding: 0.625rem 2rem;
   background: var(--SoftRed);
-  box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(73, 93, 207, 0.20012);
 }
 
 .login:hover {
   background-color: var(--White);
   color: var(--SoftRed);
   border: 0.125rem solid var(--SoftRed);
-}
-
-.login:focus-visible,
-.loginMobile:focus-visible {
-  outline: 0.125rem solid var(--SoftBlue);
-  outline-offset: 0.125rem;
 }
 
 .loginMobile {
@@ -48,4 +47,46 @@
 .loginMobile:hover {
   color: var(--SoftRed);
   border: 0.125rem solid var(--SoftRed);
+}
+
+.heroChrome {
+  line-height: 200%;
+  padding: 10px 16px;
+  background: var(--SoftBlue);
+  border: 0.125rem solid transparent;
+}
+
+.heroFire {
+  line-height: 200%;
+  padding: 10px 16px;
+  color: var(--VeryDarkBlue);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  background: #f7f7f7;
+  border-radius: 5px;
+  border: 0.125rem solid transparent;
+}
+
+.heroChrome:hover {
+  background-color: var(--White);
+  color: var(--SoftBlue);
+  border: 0.125rem solid var(--SoftBlue);
+}
+
+.heroFire:hover {
+  border: 0.125rem solid #5b6074;
+}
+
+.info {
+  line-height: 200%;
+  letter-spacing: 0.25px;
+  padding: 8px 24px;
+  background: var(--SoftBlue);
+  border: 0.125rem solid transparent;
+}
+
+.info:hover {
+  color: var(--SoftBlue);
+  background: var(--White);
+  border: 0.125rem solid var(--SoftBlue);
 }

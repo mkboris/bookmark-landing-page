@@ -14,3 +14,13 @@
 .socialContainer svg path:hover {
   fill: var(--SoftRed);
 }
+
+.socialIcon {
+  display: grid;
+  place-content: center;
+}
+
+.socialIcon:focus-visible {
+  outline: 0.125rem solid var(--SoftBlue);
+  outline-offset: 0.125rem;
+}
