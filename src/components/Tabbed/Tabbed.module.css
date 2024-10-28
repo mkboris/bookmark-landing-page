@@ -1,10 +1,10 @@
-.tabbedContainer {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
   text-align: center;
-  margin-bottom: 77px;
+  margin-bottom: 4.8125rem;
   padding-inline: 2rem;
 }
 
@@ -19,7 +19,7 @@
 .tabsWrap {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 4.5rem;
 }
 
 .tabs {
@@ -30,19 +30,19 @@
 .tabContentWrap {
   display: flex;
   flex-direction: column;
-  gap: 69px;
+  gap: 4.3125rem;
 }
 
 .tabContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .tabBtn {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 106%;
   letter-spacing: 0.533333px;
   color: var(--VeryDarkBlue);
@@ -52,8 +52,8 @@
   cursor: pointer;
   background: transparent;
   border: transparent;
-  border-bottom: 4px solid transparent;
-  padding-block: 20px;
+  border-bottom: 0.25rem solid transparent;
+  padding-block: 1.25rem;
   width: fit-content;
   align-self: center;
 }
@@ -68,13 +68,12 @@
   color: var(--VeryDarkBlue);
   opacity: 1;
   mix-blend-mode: unset;
-  border-bottom: 4px solid var(--SoftRed);
+  border-bottom: 0.25rem solid var(--SoftRed);
 }
 
 .tabBtn:focus-visible {
   outline: none;
-  /* outline: 2px solid var(--SoftBlue); */
-  border-bottom: 4px solid var(--SoftBlue);
+  border-bottom: 0.25rem solid var(--SoftBlue);
 }
 
 .lineMobile {
@@ -83,10 +82,10 @@
   background: rgba(73, 93, 207, 0.20012);
 }
 
-@media screen and (min-width: 968px) {
-  .tabbedContainer {
-    margin-bottom: 238px;
-    gap: 72px;
+@media screen and (min-width: 60.5rem) {
+  .section {
+    margin-bottom: 14.875rem;
+    gap: 4.5rem;
   }
 
   :global(.secHeading) {
@@ -103,19 +102,19 @@
     justify-content: center;
     flex-direction: row;
     position: relative;
-    max-width: 730px;
+    max-width: 45.625rem;
   }
 
   .tabBtn {
     padding-block-start: 0;
-    padding-block-end: 28px;
-    padding-inline: 53px;
+    padding-block-end: 1.75rem;
+    padding-inline: 3.3125rem;
   }
 
   .tabs::after {
     content: "";
     position: absolute;
-    width: 724px;
+    width: 45.25rem;
     height: 1px;
     background: rgba(73, 93, 207, 0.20012);
     bottom: 0;
@@ -123,7 +122,7 @@
 
   .tabContentWrap {
     flex-direction: row;
-    gap: 125px;
+    gap: 7.8125rem;
   }
 
   .tabContent {

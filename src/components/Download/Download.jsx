@@ -46,7 +46,6 @@ function Card({ src, alt, heading, paragraph }) {
         <Heading>{heading}</Heading>
         <Paragraph>{paragraph}</Paragraph>
       </div>
-      {/* <img src="assets/bg-dots.svg" alt="" /> */}
       <Button type="info">Add & Install Extension</Button>
     </div>
   );

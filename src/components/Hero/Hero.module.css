@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  margin: 0 auto 140px;
+  margin: 0 auto 8.75rem;
   padding-inline: 2rem;
-  /* max-width: 1184px; */
+  /* max-width: 74rem; */
 }
 
 .intro {
@@ -31,7 +31,7 @@
   color: var(--VeryDarkBlue);
   mix-blend-mode: normal;
   opacity: 0.5;
-  max-width: 579px;
+  max-width: 36.1875rem;
 }
 
 .btnContainer {
@@ -48,30 +48,30 @@
 
 .bgBlue {
   position: absolute;
-  width: 700px;
-  height: 203px;
+  width: 43.75rem;
+  height: 12.6875rem;
   /* left: 925px; */
   top: 100px;
   background: var(--SoftBlue);
-  border-radius: 316.5px 0 0 316.5px;
+  border-radius: 19.75rem 0 0 19.75rem;
   z-index: -1;
 }
 
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 60.5rem) {
   .hero {
     flex-direction: row;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;
     justify-content: center;
     align-items: flex-start;
-    /* gap: 65px;  */
+    /* gap: 4.0625rem;  */
     padding-inline-start: 2.5rem;
     padding-inline-end: 0;
   }
 
   .intro {
     align-items: flex-start;
-    max-width: 540px;
-    padding-top: 71px;
+    max-width: 33.75rem;
+    padding-top: 4.4375rem;
     text-align: left;
   }
 
@@ -92,11 +92,11 @@
   }
 
   /* .heroImg {
-    max-width: 579px;
+    max-width: 36.1875rem;
   } */
 
   .bgBlue {
-    width: 640px;
-    height: 352px;
+    width: 40rem;
+    height: 22rem;
   }
 }

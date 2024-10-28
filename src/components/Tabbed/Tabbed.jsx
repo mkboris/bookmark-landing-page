@@ -28,7 +28,7 @@ const content = [
 
 function Tabbed() {
   return (
-    <section className={styles.tabbedContainer}>
+    <section className={styles.section}>
       <TabbedIntro />
       <Tabs content={content} />
     </section>

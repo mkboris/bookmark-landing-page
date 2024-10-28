@@ -32,7 +32,7 @@
   outline-offset: 0.125rem;
 }
 
-.menu {
+.nav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@
   margin-block-end: 13.6875rem;
 }
 
-.menu ul {
+.nav ul {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -49,8 +49,8 @@
   width: 100%;
 }
 
-.menu ul a:link,
-.menu ul a:visited {
+.nav ul a:link,
+.nav ul a:visited {
   font-weight: 400;
   font-size: 1.25rem;
   color: var(--White);
@@ -66,21 +66,21 @@
   border-right: none;
 }
 
-.menu ul a.menuPrice:link,
-.menu ul a.menuPrice:visited {
+.nav ul a.navPrice:link,
+.nav ul a.navPrice:visited {
   border: none;
 }
 
-.menu ul a:is(:hover, :focus) {
+.nav ul a:is(:hover, :focus) {
   color: var(--SoftRed);
 }
 
-.menu ul a:focus-visible {
+.nav ul a:focus-visible {
   outline: 0.125rem solid var(--SoftBlue);
   border: 1px solid transparent;
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 48.125rem) {
   .menuContainer {
     display: none;
   }

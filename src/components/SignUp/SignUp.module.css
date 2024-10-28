@@ -1,0 +1,130 @@
+.signUpContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--SoftBlue);
+  padding-inline: 2rem;
+  padding-block: 3.75rem 2.375rem;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 26.4375rem;
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 308%;
+  text-transform: uppercase;
+  letter-spacing: 0.3125rem;
+  color: var(--White);
+}
+
+.heading {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+  line-height: 117%;
+  text-align: center;
+  letter-spacing: -0.075px;
+  color: var(--White);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 33.75rem;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 19.4375rem;
+}
+
+.input {
+  background: var(--White);
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1.25rem;
+  border: 0.125rem solid transparent;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 200%;
+  letter-spacing: 0.25px;
+  color: var(--VeryDarkBlue);
+  width: 100%;
+  max-width: 19.4375rem;
+}
+
+.input.error {
+  border: 0.125rem solid var(--SoftRed);
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  background-image: url(../../assets/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 17.1875rem;
+}
+
+.input::placeholder {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 200%;
+  letter-spacing: 0.25px;
+  color: rgba(36, 42, 69, 0.250109);
+}
+
+.errorMsg {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.625rem;
+  text-align: left;
+  line-height: 0.75rem;
+  letter-spacing: 0.25px;
+  color: var(--White);
+  align-self: flex-start;
+  background-color: var(--SoftRed);
+  border-radius: 0 0 0.3125rem 0.3125rem;
+  padding: 0.25rem 0.75rem 0.375rem;
+  width: 100%;
+  max-width: 19.4375rem;
+}
+
+@media screen and (min-width: 60.5rem) {
+  .signUpContainer {
+    align-items: center;
+    padding-block: 3.625rem 4.625rem;
+    gap: 2.25rem;
+  }
+
+  .form {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.3125rem;
+  }
+
+  .input,
+  .errorMsg {
+    max-width: 18.75rem;
+  }
+
+  .input.error {
+    background-position: 16.5625rem;
+  }
+
+  .textWrap {
+    gap: 1.5rem;
+  }
+
+  .heading {
+    line-height: 125%;
+    letter-spacing: -0.1px;
+  }
+}

@@ -7,7 +7,7 @@ function MobileMenu({ onCloseMenu }) {
   return (
     <div className={styles.menuContainer}>
       <LogoBtn onCloseMenu={onCloseMenu} />
-      <Menu />
+      <MobileNav />
       <Social />
     </div>
   );
@@ -41,14 +41,14 @@ function CloseBtn({ onCloseMenu }) {
   );
 }
 
-function Menu() {
+function MobileNav() {
   return (
-    <nav className={styles.menu}>
+    <nav className={styles.nav}>
       <ul>
         <a href="#">
           <li>Features</li>
         </a>
-        <a href="#" className={styles.menuPrice}>
+        <a href="#" className={styles.navPrice}>
           <li>Pricing</li>
         </a>
         <a href="#">

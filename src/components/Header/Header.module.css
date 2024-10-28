@@ -1,5 +1,5 @@
 .header {
-  max-width: 1184px;
+  max-width: 74rem;
   margin: 2.5rem auto 5rem;
   padding-inline: 2rem;
   display: flex;
@@ -24,7 +24,7 @@
   outline-offset: 0.125rem;
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 48.125rem) {
   .header {
     margin-block-end: 6.75rem;
     padding-inline: 2.5rem;
