@@ -11,12 +11,12 @@ const faqs = [
   {
     question: "How can I request a new browser?",
     answer:
-      "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros alique convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
+      "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
   },
   {
     question: "Is there a mobile app?",
     answer:
-      "Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulu dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.",
+      "Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulu dolor, ut condimentum urna vulputate eget.",
   },
   {
     question: "What about other Chromium browsers?",
@@ -50,12 +50,11 @@ function Accordion({ data }) {
 
   return (
     <div className={styles.accordion}>
-      {data.map((el, i) => (
+      {data.map((el) => (
         <AccordionItem
           curOpen={curOpen}
           onOpen={setCurOpen}
           question={el.question}
-          num={i}
           key={el.question}
         >
           {el.answer}
@@ -65,23 +64,23 @@ function Accordion({ data }) {
   );
 }
 
-function AccordionItem({ num, question, curOpen, onOpen, children }) {
-  const isOpen = num === curOpen;
+function AccordionItem({ question, curOpen, onOpen, children }) {
+  const isOpen = question === curOpen;
 
-  function handleToogle() {
-    onOpen(isOpen ? null : num);
+  function handleToggle() {
+    onOpen(isOpen ? null : question);
   }
 
   return (
-    <div className={styles.item} onClick={handleToogle}>
+    <div className={styles.item} onClick={handleToggle}>
       <hr className={styles.line} />
       <div className={styles.quesIcon}>
         <Button
           type="accordion"
-          onClick={handleToogle}
+          onClick={handleToggle}
           aria-expanded={isOpen}
-          aria-controls={`accordion-content-${num}`}
-          id={`accordion-header-${num}`}
+          aria-controls={`accordion-content-${question}`}
+          id={`accordion-header-${question}`}
         >
           {question}
         </Button>
@@ -107,9 +106,9 @@ function AccordionItem({ num, question, curOpen, onOpen, children }) {
       </div>
 
       <div
-        id={`accordion-content-${num}`}
+        id={`accordion-content-${question}`}
         role="region"
-        aria-labelledby={`accordion-header-${num}`}
+        aria-labelledby={`accordion-header-${question}`}
         style={{ display: isOpen ? "flex" : "none" }}
       >
         <p className={styles.answer}>{children}</p>
