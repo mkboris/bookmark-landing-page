@@ -56,7 +56,8 @@
   .intro {
     align-items: flex-start;
     max-width: 33.75rem;
-    padding-top: 4.4375rem;
+    padding-block-start: 4.4375rem;
+    padding-inline-start: 1.5rem;
     text-align: left;
   }
 
