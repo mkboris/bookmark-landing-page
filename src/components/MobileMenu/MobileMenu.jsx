@@ -29,7 +29,11 @@ function LogoBtn({ onCloseMenu }) {
 
 function CloseBtn({ onCloseMenu }) {
   return (
-    <button className={styles.closeBtn} onClick={onCloseMenu}>
+    <button
+      className={styles.closeBtn}
+      onClick={onCloseMenu}
+      aria-label="Close mobile menu"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15">
         <path
           fill="#FFF"
@@ -45,15 +49,17 @@ function MobileNav() {
   return (
     <nav className={styles.nav}>
       <ul>
-        <a href="#">
-          <li>Features</li>
-        </a>
-        <a href="#" className={styles.navPrice}>
-          <li>Pricing</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#" className={styles.navPrice}>
+            Pricing
+          </a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
       </ul>
 
       <Button type="loginMobile">Login</Button>

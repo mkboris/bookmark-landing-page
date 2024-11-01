@@ -31,17 +31,17 @@ export default Header;
 
 function NavBar() {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} aria-label="Main navigation">
       <ul>
-        <a href="#">
-          <li>Features</li>
-        </a>
-        <a href="#">
-          <li>Pricing</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
       </ul>
 
       <Button type="login">Login</Button>
@@ -51,7 +51,11 @@ function NavBar() {
 
 function HamburgerBtn({ onShowMenu }) {
   return (
-    <button className={styles.hamBtn} onClick={onShowMenu}>
+    <button
+      className={styles.hamBtn}
+      onClick={onShowMenu}
+      aria-label="Open mobile menu"
+    >
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
         <path
           fill="#242A45"

@@ -4,7 +4,7 @@
   flex-direction: column-reverse;
   margin: 0 auto 8.75rem;
   padding-inline: 2rem;
-  /* max-width: 74rem; */
+  gap: 4.375rem;
 }
 
 .intro {
@@ -42,28 +42,13 @@
   gap: 1rem;
 }
 
-.illustContainer {
-  position: relative;
-}
-
-.bgBlue {
-  position: absolute;
-  width: 43.75rem;
-  height: 12.6875rem;
-  /* left: 925px; */
-  top: 100px;
-  background: var(--SoftBlue);
-  border-radius: 19.75rem 0 0 19.75rem;
-  z-index: -1;
-}
-
 @media screen and (min-width: 60.5rem) {
   .hero {
     flex-direction: row;
     margin-bottom: 5rem;
     justify-content: center;
     align-items: flex-start;
-    /* gap: 4.0625rem;  */
+    gap: 0;
     padding-inline-start: 2.5rem;
     padding-inline-end: 0;
   }
@@ -90,10 +75,6 @@
   .btnContainer {
     justify-content: flex-start;
   }
-
-  /* .heroImg {
-    max-width: 36.1875rem;
-  } */
 
   .bgBlue {
     width: 40rem;

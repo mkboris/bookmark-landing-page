@@ -24,15 +24,15 @@ function NavBar() {
   return (
     <nav className={styles.nav}>
       <ul>
-        <a href="#">
-          <li>Features</li>
-        </a>
-        <a href="#">
-          <li>Pricing</li>
-        </a>
-        <a href="#">
-          <li>Contact</li>
-        </a>
+        <li>
+          <a href="#">Features</a>
+        </li>
+        <li>
+          <a href="#">Pricing</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
       </ul>
     </nav>
   );

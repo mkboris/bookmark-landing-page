@@ -31,13 +31,10 @@ function Intro() {
 
 function Illustration() {
   return (
-    // <div className={styles.illustContainer}>
     <img
       className={styles.heroImg}
       src="/assets/illustration-hero.svg"
       alt=""
     />
-    //   <div className={styles.bgBlue}></div>
-    // </div>
   );
 }
