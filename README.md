@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site](https://bookmark-landing-page-five-flax.vercel.app/)
+- [Live Site]()
 
 ### Built with
 
