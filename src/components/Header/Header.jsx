@@ -18,7 +18,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <Logo className={styles.logo}>
-        <img src="/assets/logo-bookmark.svg" alt="Bookmark" />
+        <img src="/logo-bookmark.svg" alt="Bookmark" />
       </Logo>
       <NavBar />
       <HamburgerBtn onShowMenu={handleShowMenu} />

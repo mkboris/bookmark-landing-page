@@ -67,7 +67,7 @@
 .input.error {
   border: 0.125rem solid var(--SoftRed);
   border-radius: 0.3125rem 0.3125rem 0 0;
-  background-image: url(../../assets/icon-error.svg);
+  background-image: url(../../icon-error.svg);
   background-repeat: no-repeat;
   background-position: 17.1875rem;
 }

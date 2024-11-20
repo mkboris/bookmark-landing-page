@@ -14,19 +14,19 @@ function Download() {
 
       <div className={styles.cardContainer}>
         <Card
-          src="/assets/logo-chrome.svg"
+          src="/logo-chrome.svg"
           alt="Chrome Logo"
           heading="Add to Chrome"
           paragraph="Minimum version 62"
         />
         <Card
-          src="/assets/logo-firefox.svg"
+          src="/logo-firefox.svg"
           alt="Firefox Logo"
           heading="Add to Firefox"
           paragraph="Minimum version 55"
         />
         <Card
-          src="/assets/logo-opera.svg"
+          src="/logo-opera.svg"
           alt="Opera Logo"
           heading="Add to Opera"
           paragraph="Minimum version 46"

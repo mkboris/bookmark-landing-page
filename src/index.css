@@ -121,7 +121,7 @@ textarea:not([rows]) {
 }
 
 body {
-  background-image: url("../assets/bg-blue-right.svg");
+  background-image: url("../bg-blue-right.svg");
   background-repeat: no-repeat;
   background-position: right -15px top 220px;
   background-size: 203px;

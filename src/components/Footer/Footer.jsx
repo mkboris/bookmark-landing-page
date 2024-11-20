@@ -8,7 +8,7 @@ function Footer() {
       <div className={styles.wrap}>
         <div className={styles.logoNav}>
           <Logo>
-            <img src="/assets/logo-bookmark-footer.svg" alt="Bookmark" />
+            <img src="/logo-bookmark-footer.svg" alt="Bookmark" />
           </Logo>
           <NavBar />
         </div>

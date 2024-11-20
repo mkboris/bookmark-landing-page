@@ -30,11 +30,5 @@ function Intro() {
 }
 
 function Illustration() {
-  return (
-    <img
-      className={styles.heroImg}
-      src="/assets/illustration-hero.svg"
-      alt=""
-    />
-  );
+  return <img className={styles.heroImg} src="/illustration-hero.svg" alt="" />;
 }

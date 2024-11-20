@@ -19,7 +19,7 @@ function LogoBtn({ onCloseMenu }) {
   return (
     <div className={styles.logoBtn}>
       <Logo>
-        <img src="/assets/logo-bookmark-white.svg" alt="Bookmark" />
+        <img src="/logo-bookmark-white.svg" alt="Bookmark" />
       </Logo>
 
       <CloseBtn onCloseMenu={onCloseMenu} />
