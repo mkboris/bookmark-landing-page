@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
 import styles from "./Tabbed.module.css";
 import Button from "../Button/Button";
 
@@ -28,7 +30,7 @@ const content = [
 
 function Tabbed() {
   return (
-    <section className={styles.section}>
+    <section id="features" className={styles.section}>
       <TabbedIntro />
       <Tabs content={content} />
     </section>
@@ -81,27 +83,44 @@ function Tabs({ content }) {
 
 function Tab({ children, num, activeTab, onClick }) {
   return (
-    <button
+    <motion.button
       className={`${styles.tabBtn} ${activeTab === num ? styles.active : ""}`}
       onClick={() => onClick(num)}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
 
+const contentVariants = {
+  hidden: { x: -90, opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 0.5 },
+  },
+};
+
 function TabContent({ item }) {
   return (
-    <div className={styles.tabContentWrap}>
-      <img src={item.image} alt="" />
+    <AnimatePresence mode="wait">
+      <motion.div
+        className={styles.tabContentWrap}
+        variants={contentVariants}
+        initial="hidden"
+        animate="visible"
+        exit={{ x: -90, opacity: 0 }}
+      >
+        <img src={item.image} alt="" />
 
-      <div className={styles.tabContent}>
-        <div>
-          <h2 className="secHeading">{item.summary}</h2>
-          <p className="paragraph">{item.details}</p>
+        <div className={styles.tabContent}>
+          <div>
+            <h2 className="secHeading">{item.summary}</h2>
+            <p className="paragraph">{item.details}</p>
+          </div>
+          <Button type="info">More Info</Button>
         </div>
-        <Button type="info">More Info</Button>
-      </div>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   );
 }

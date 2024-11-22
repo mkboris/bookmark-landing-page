@@ -50,7 +50,7 @@ function MobileNav() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <a href="#">Features</a>
+          <a href="#features">Features</a>
         </li>
         <li>
           <a href="#" className={styles.navPrice}>
@@ -58,7 +58,7 @@ function MobileNav() {
           </a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
 

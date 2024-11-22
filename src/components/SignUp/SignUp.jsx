@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { toast } from "react-hot-toast";
+
 import styles from "./SignUp.module.css";
 import Button from "../Button/Button";
 
@@ -23,14 +25,14 @@ function SignUp() {
     if (validateEmail(email)) {
       setIsValid(true);
       setEmail("");
-      alert("Thanks for signing up.");
+      toast.success("Thanks for signing up.");
     } else {
       setIsValid(false);
     }
   };
 
   return (
-    <div className={styles.signUpContainer}>
+    <div id="contact" className={styles.signUpContainer}>
       <div className={styles.textWrap}>
         <p className={styles.paragraph}>35,000+ already joined</p>
         <h3 className={styles.heading}>
@@ -38,7 +40,7 @@ function SignUp() {
         </h3>
       </div>
 
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form noValidate className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.inputWrap}>
           <input
             type="email"

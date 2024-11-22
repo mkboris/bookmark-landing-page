@@ -34,13 +34,13 @@ function NavBar() {
     <nav className={styles.nav} aria-label="Main navigation">
       <ul>
         <li>
-          <a href="#">Features</a>
+          <a href="#features">Features</a>
         </li>
         <li>
           <a href="#">Pricing</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
 

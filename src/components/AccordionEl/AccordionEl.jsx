@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+
 import styles from "./AccordionEl.module.css";
 import Button from "../Button/Button";
 
@@ -64,6 +66,11 @@ function Accordion({ data }) {
   );
 }
 
+const containerVariants = {
+  open: { opacity: 1, height: "auto" },
+  collapsed: { opacity: 0, height: 0 },
+};
+
 function AccordionItem({ question, curOpen, onOpen, children }) {
   const isOpen = question === curOpen;
 
@@ -84,35 +91,41 @@ function AccordionItem({ question, curOpen, onOpen, children }) {
         >
           {question}
         </Button>
-        {isOpen ? (
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-            <path
-              fill="none"
-              stroke="#FA5959"
-              strokeWidth="3"
-              d="M1 10l8-8 8 8"
-            />
-          </svg>
-        ) : (
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
-            <path
-              fill="none"
-              stroke="#5267DF"
-              strokeWidth="3"
-              d="M1 1l8 8 8-8"
-            />
-          </svg>
-        )}
+
+        <motion.svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="12"
+          initial={{ rotate: 0 }}
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+        >
+          <path
+            fill="none"
+            stroke={isOpen ? "#FA5959" : "#5267DF"}
+            strokeWidth="3"
+            d="M1 1l8 8 8-8"
+          />
+        </motion.svg>
       </div>
 
-      <div
-        id={`accordion-content-${question}`}
-        role="region"
-        aria-labelledby={`accordion-header-${question}`}
-        style={{ display: isOpen ? "flex" : "none" }}
-      >
-        <p className={styles.answer}>{children}</p>
-      </div>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            id={`accordion-content-${question}`}
+            role="region"
+            aria-labelledby={`accordion-header-${question}`}
+            className={styles.answerContainer}
+            variants={containerVariants}
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
+            <p className={styles.answer}>{children}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
