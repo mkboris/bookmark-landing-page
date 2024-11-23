@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
+
 import styles from "./Header.module.css";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
@@ -15,6 +17,14 @@ function Header() {
     setShowMenu(false);
   }
 
+  useEffect(() => {
+    if (showMenu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [showMenu]);
+
   return (
     <header className={styles.header}>
       <Logo className={styles.logo}>
@@ -22,7 +32,9 @@ function Header() {
       </Logo>
       <NavBar />
       <HamburgerBtn onShowMenu={handleShowMenu} />
-      {showMenu && <MobileMenu onCloseMenu={handleCloseMenu} />}
+      <AnimatePresence>
+        {showMenu && <MobileMenu onCloseMenu={handleCloseMenu} />}
+      </AnimatePresence>
     </header>
   );
 }

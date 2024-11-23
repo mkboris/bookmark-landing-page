@@ -92,7 +92,7 @@ function Tab({ children, num, activeTab, onClick }) {
   );
 }
 
-const contentVariants = {
+const tabVariants = {
   hidden: { x: -90, opacity: 0 },
   visible: {
     x: 0,
@@ -106,7 +106,7 @@ function TabContent({ item }) {
     <AnimatePresence mode="wait">
       <motion.div
         className={styles.tabContentWrap}
-        variants={contentVariants}
+        variants={tabVariants}
         initial="hidden"
         animate="visible"
         exit={{ x: -90, opacity: 0 }}

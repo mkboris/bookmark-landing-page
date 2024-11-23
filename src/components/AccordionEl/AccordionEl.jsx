@@ -66,7 +66,7 @@ function Accordion({ data }) {
   );
 }
 
-const containerVariants = {
+const accordionVariants = {
   open: { opacity: 1, height: "auto" },
   collapsed: { opacity: 0, height: 0 },
 };
@@ -116,7 +116,7 @@ function AccordionItem({ question, curOpen, onOpen, children }) {
             role="region"
             aria-labelledby={`accordion-header-${question}`}
             className={styles.answerContainer}
-            variants={containerVariants}
+            variants={accordionVariants}
             initial="collapsed"
             animate="open"
             exit="collapsed"

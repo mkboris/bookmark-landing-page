@@ -28,11 +28,12 @@ Users should be able to:
 
 ### Links
 
-- [Live Site]()
+- [Live Site](https://bookmark-landing-page-five-flax.vercel.app/)
 
 ### Built with
 
-- React
+- [React](https://reactjs.org/)
+- [Framer Motion](https://motion.dev/)
 
 ### What I learned
 

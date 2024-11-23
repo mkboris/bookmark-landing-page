@@ -1,15 +1,37 @@
+import { motion } from "motion/react";
+
 import styles from "./MobileMenu.module.css";
 import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import Social from "../Social/Social";
 
 function MobileMenu({ onCloseMenu }) {
+  const menuVariants = {
+    hidden: { opacity: 0, x: "100%" },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 300, damping: 30 },
+    },
+    exit: {
+      opacity: 0,
+      x: "100%",
+      transition: { type: "tween", duration: 0.3 },
+    },
+  };
+
   return (
-    <div className={styles.menuContainer}>
+    <motion.div
+      className={styles.menuContainer}
+      variants={menuVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <LogoBtn onCloseMenu={onCloseMenu} />
       <MobileNav />
       <Social />
-    </div>
+    </motion.div>
   );
 }
 
