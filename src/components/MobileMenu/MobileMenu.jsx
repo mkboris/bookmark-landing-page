@@ -11,7 +11,7 @@ function MobileMenu({ onCloseMenu }) {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { type: "spring", stiffness: 300, damping: 30 },
+      transition: { stiffness: 300, damping: 30 },
     },
     exit: {
       opacity: 0,
@@ -72,7 +72,7 @@ function MobileNav() {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <a href="#features">Features</a>
+          <a href="#">Features</a>
         </li>
         <li>
           <a href="#" className={styles.navPrice}>
@@ -80,7 +80,7 @@ function MobileNav() {
           </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#">Contact</a>
         </li>
       </ul>
 
