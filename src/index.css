@@ -79,14 +79,6 @@ label {
   line-height: 1.1;
 }
 
-/* Balance text wrapping on headings */
-/* h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-} */
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -118,20 +110,6 @@ textarea:not([rows]) {
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
-}
-
-body {
-  background-image: url("../bg-blue-right.svg");
-  background-repeat: no-repeat;
-  background-position: right -15px top 220px;
-  background-size: 203px;
-}
-
-@media screen and (min-width: 37.5rem) {
-  body {
-    background-position: right -15px top 310px;
-    background-size: auto;
-  }
 }
 
 .no-scroll {

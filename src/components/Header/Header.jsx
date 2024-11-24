@@ -18,11 +18,30 @@ function Header() {
   }
 
   useEffect(() => {
+    function handleResize() {
+      const isLargeScreen = window.matchMedia("(min-width: 50rem)").matches;
+
+      if (isLargeScreen) {
+        document.body.classList.remove("no-scroll");
+      } else if (showMenu) {
+        document.body.classList.add("no-scroll");
+      }
+    }
+
     if (showMenu) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
     }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.body.classList.remove("no-scroll");
+    };
   }, [showMenu]);
 
   return (
@@ -70,7 +89,7 @@ function HamburgerBtn({ onShowMenu }) {
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15">
         <path
-          fill="#242A45"
+          fill="var(--VeryDarkBlue)"
           fillRule="evenodd"
           d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"
         />

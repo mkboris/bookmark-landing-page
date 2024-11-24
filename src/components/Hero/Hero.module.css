@@ -4,7 +4,27 @@
   flex-direction: column-reverse;
   margin: 0 auto 8.75rem;
   padding-inline: 2rem;
-  gap: 4.375rem;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.imgWrap {
+  position: relative;
+}
+
+.imgWrap::before {
+  content: none;
+}
+
+@media screen and (min-width: 60.5rem) {
+  .imgWrap::before {
+    content: url("../bg-blue-right.svg");
+    position: absolute;
+    right: -180px;
+    bottom: -20px;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
 }
 
 .intro {
@@ -48,7 +68,6 @@
     margin-bottom: 5rem;
     justify-content: center;
     align-items: flex-start;
-    gap: 0;
     padding-inline-start: 2.5rem;
     padding-inline-end: 0;
   }

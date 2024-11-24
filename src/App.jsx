@@ -15,7 +15,7 @@ function App() {
             duration: 4000,
             iconTheme: {
               primary: "var(--SoftBlue)",
-              secondary: "white",
+              secondary: "var(--White)",
             },
           },
           style: {

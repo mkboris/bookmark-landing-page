@@ -98,7 +98,7 @@
   border: 1px solid transparent;
 }
 
-@media screen and (min-width: 48.125rem) {
+@media screen and (min-width: 50rem) {
   .menuContainer {
     display: none;
   }

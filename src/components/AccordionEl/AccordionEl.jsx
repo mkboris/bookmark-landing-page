@@ -102,7 +102,7 @@ function AccordionItem({ question, curOpen, onOpen, children }) {
         >
           <path
             fill="none"
-            stroke={isOpen ? "#FA5959" : "#5267DF"}
+            stroke={isOpen ? "var(--SoftRed)" : "var(--SoftBlue)"}
             strokeWidth="3"
             d="M1 1l8 8 8-8"
           />

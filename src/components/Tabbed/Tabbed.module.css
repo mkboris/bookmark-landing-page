@@ -31,6 +31,22 @@
   display: flex;
   flex-direction: column;
   gap: 4.3125rem;
+  position: relative;
+}
+
+.tabContentWrap::before {
+  content: none;
+}
+
+@media screen and (min-width: 60.5rem) {
+  .tabContentWrap::before {
+    content: url("../bg-blue-left.svg");
+    position: absolute;
+    left: -180px;
+    bottom: -100px;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
 }
 
 .tabContent {
@@ -130,6 +146,7 @@
     align-items: flex-start;
     justify-content: center;
     text-align: left;
+    max-width: 28.25rem;
   }
 
   .lineMobile {
