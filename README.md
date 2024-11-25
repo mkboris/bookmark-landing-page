@@ -37,6 +37,8 @@ Users should be able to:
 
 ### What I learned
 
+This is my first React project, where I learned to build interactive UIs using reusable components, manage state with `useState`, and integrate Framer Motion for animations. Moving forward, I aim to deepen my React knowledge by exploring advanced features and improving accessibility.
+
 ## Author
 
 - Frontend Mentor - [mkboris](https://www.frontendmentor.io/profile/mkboris)
