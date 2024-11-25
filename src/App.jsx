@@ -23,6 +23,11 @@ function App() {
             maxWidth: "31.25rem",
             padding: "1rem 1.5rem",
           },
+          ariaProps: {
+            role: "status",
+            "aria-live": "polite",
+            "aria-atomic": "true",
+          },
         }}
       />
       <Header />
