@@ -6,21 +6,25 @@ import Button from "../Button/Button";
 
 const faqs = [
   {
+    id: "faq1",
     question: "What is Bookmark?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.",
   },
   {
+    id: "faq2",
     question: "How can I request a new browser?",
     answer:
       "Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.",
   },
   {
+    id: "faq3",
     question: "Is there a mobile app?",
     answer:
       "Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulu dolor, ut condimentum urna vulputate eget.",
   },
   {
+    id: "faq4",
     question: "What about other Chromium browsers?",
     answer:
       "Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.",
@@ -56,8 +60,9 @@ function Accordion({ data }) {
         <AccordionItem
           curOpen={curOpen}
           onOpen={setCurOpen}
+          id={el.id}
           question={el.question}
-          key={el.question}
+          key={el.id}
         >
           {el.answer}
         </AccordionItem>
@@ -71,11 +76,11 @@ const accordionVariants = {
   collapsed: { opacity: 0, height: 0 },
 };
 
-function AccordionItem({ question, curOpen, onOpen, children }) {
-  const isOpen = question === curOpen;
+function AccordionItem({ id, question, curOpen, onOpen, children }) {
+  const isOpen = id === curOpen;
 
   function handleToggle() {
-    onOpen(isOpen ? null : question);
+    onOpen(isOpen ? null : id);
   }
 
   return (
@@ -86,8 +91,8 @@ function AccordionItem({ question, curOpen, onOpen, children }) {
           type="accordion"
           onClick={handleToggle}
           aria-expanded={isOpen}
-          aria-controls={`accordion-content-${question}`}
-          id={`accordion-header-${question}`}
+          aria-controls={`accordion-content-${id}`}
+          id={`accordion-header-${id}`}
         >
           {question}
         </Button>
@@ -112,9 +117,9 @@ function AccordionItem({ question, curOpen, onOpen, children }) {
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            id={`accordion-content-${question}`}
+            id={`accordion-content-${id}`}
             role="region"
-            aria-labelledby={`accordion-header-${question}`}
+            aria-labelledby={`accordion-header-${id}`}
             className={styles.answerContainer}
             variants={accordionVariants}
             initial="collapsed"
